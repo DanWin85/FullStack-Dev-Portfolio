@@ -51,12 +51,11 @@ interface ContactSectionProps {
 }
 
 const contactInfo: ContactInfo = {
-  email: 'dan.win@example.com',
-  phone: '+1 (555) 123-4567',
-  location: 'Auckland, New Zealand',
+  email: 'dan.wingate85@gmail.com',
+  phone: '+64 (022) 350-8809',
+  location: 'Palmerston North, New Zealand',
   github: 'https://github.com/DanWin85',
-  linkedin: 'https://linkedin.com/in/danwin85',
-  twitter: 'https://twitter.com/danwin85',
+  linkedin: 'https://linkedin.com/in/daniel-r-wingate',
 };
 
 const ContactSection: React.FC<ContactSectionProps> = ({ darkMode = false }) => {
@@ -144,11 +143,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode = false }) => 
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - replace with actual email service
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // For now, we'll just show success message
-      // In a real app, you'd integrate with a service like EmailJS, Netlify Forms, or your backend
       console.log('Form submitted:', formData);
       
       setSubmitSuccess(true);
@@ -174,12 +170,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode = false }) => 
       url: contactInfo.linkedin,
       icon: <LinkedIn />,
       color: '#0077B5',
-    },
-    {
-      name: 'Twitter',
-      url: contactInfo.twitter || '',
-      icon: <Twitter />,
-      color: '#1DA1F2',
     },
   ];
 

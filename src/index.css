@@ -1,68 +1,136 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Add this to your src/index.css file */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Reset and full-width base styles */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Override Material-UI container styles for full width */
+.MuiContainer-root {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
+/* Full width sections */
+.full-width-section {
+  width: 100%;
+  margin: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Hero section full width */
+.hero-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Projects section full width */
+.projects-section {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Skills section full width */
+.skills-section {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Contact section full width */
+.contact-section {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Responsive padding for smaller screens */
+@media (max-width: 768px) {
+  .MuiContainer-root,
+  .full-width-section,
+  .hero-section,
+  .projects-section,
+  .skills-section,
+  .contact-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiContainer-root,
+  .full-width-section,
+  .hero-section,
+  .projects-section,
+  .skills-section,
+  .contact-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Update your src/App.css file - replace the existing #root styles */
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Remove default App.css constraints */
+.App {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Override Material-UI Box components that might constrain width */
+.MuiBox-root.main-content {
+  width: 100%;
+  max-width: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Header should span full width */
+.MuiAppBar-root {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+/* Footer should span full width */
+.footer-section {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
