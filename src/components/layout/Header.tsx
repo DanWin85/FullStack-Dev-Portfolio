@@ -151,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({
         </IconButton>
         <IconButton
           component="a"
-          href="https://linkedin.com/in/danwin85"
+          href="https://linkedin.com/in/daniel-r-wingate"
           target="_blank"
           color="inherit"
           size="small"
@@ -269,7 +269,7 @@ const Header: React.FC<HeaderProps> = ({
           </IconButton>
           <IconButton 
             component="a" 
-            href="https://linkedin.com/in/danwin85" 
+            href="https://linkedin.com/in/daniel-r-wingate" 
             target="_blank"
             size="small"
             sx={{ bgcolor: 'action.hover' }}
@@ -331,7 +331,7 @@ const Header: React.FC<HeaderProps> = ({
                   display: { xs: 'none', sm: 'block' }
                 }}
               >
-                Dan Win
+                Daniel Wingate Dev
               </Typography>
             </Box>
 
